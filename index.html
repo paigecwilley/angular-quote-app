@@ -3,21 +3,25 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400" rel="stylesheet">
 </head>
 <body ng-controller="quotesController">
 
 <div class="whole-page-container">
+	
 	<div class="search-column">
+	<div class="author-search">
 		<h2>Authors</h2>
 		<input id="author-search" type="text" placeholder="Search by author" ng-model="nameText.fullName"/>
 		<ul id="author-list">
 			<li id="author-names" ng-repeat="authors in authorsList |  filter:nameText | orderBy: 'lastName'"><a href="#/{{authors.fullName}}">{{authors.firstName}} {{authors.lastName}}</a></li>
 		</ul>
+		</div>
 		<div class="genre-search">
 			<h2>Search by genre</h2>
 			<ul id="genre-list">
-				<li ng-repeat="genre in genresList"><a href="#/{{genre.genre}}"><button>
-					{{genre.genre}}</button></a></li>
+				<li ng-repeat="genre in genresList"><a href="#/{{genre.genre}}">
+					{{genre.genre}}</a></li>
 				</ul>		
 			</div>
 		</div>

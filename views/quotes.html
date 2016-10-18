@@ -1,16 +1,17 @@
 	<div class="quote-block">
-			<button ng-click="sayQuote()">Get Quote!</button>
+		<img src="imgs/get-quote-button.svg" ng-click="sayQuote()" class="get-quote-button">
+
 			<h1>Your Quotes</h1>
 			<ul id="quote-list">
-				<li ng-repeat="quote in quotesList">{{quote.saying}} {{quote.fullName}}</li>
+				<li ng-repeat="quote in quotesList">"{{quote.saying}}" ~ {{quote.fullName}}</li>
 			</ul>
 		</div>
 		<div id="add-quote-block">
 			<div id="add-quote-button">Add your own quote!</div>
 			<form id="add-quote-form">
-			 	<input type="text" name="quote" ng-model="quoteModel.saying"/>
-				 <input type="text" name="first name" ng-model="quoteModel.firstName"/>
-				 <input type="text" name="last name" ng-model="quoteModel.lastName"/>
+			 	<input class="add-input" type="text" name="quote" placeholder="Quote" ng-model="quoteModel.saying"/>
+				 <input class="add-input" type="text" name="first name" placeholder="First Name"ng-model="quoteModel.firstName"/>
+				 <input class="add-input" type="text" name="last name" placeholder="Last Name" ng-model="quoteModel.lastName"/>
 				 <button type="submit" ng-click="submitQuote()">Submit</button>
 			</form>
 

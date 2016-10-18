@@ -2,9 +2,9 @@ app.controller('quotesController', function($scope){
 
 //Adding a quote model
 $scope.quoteModel = {};
-$scope.quoteModel.saying = "";
-$scope.quoteModel.firstName = "first name";
-$scope.quoteModel.lastName = "last name";
+$scope.quoteModel.saying;
+$scope.quoteModel.firstName;
+$scope.quoteModel.lastName;
 $scope.quoteModel.fullName = "";
 
 	

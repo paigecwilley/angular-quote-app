@@ -1,4 +1,4 @@
-app.controller('authorController', function($scope, $routeParams, $timeout){
+app.controller('authorController', function($scope, $routeParams, $timeout, $route){
 
 var sortBy = $routeParams.sortBy;
 
@@ -22,7 +22,9 @@ init("type");
 
 
 
-
+$scope.clearSearch = function(){
+	$route.updateParams({sortBy: ''});
+}
 
 
 

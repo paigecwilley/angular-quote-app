@@ -8,7 +8,7 @@ html, body {
 .search-column {
 	min-height: 720px;
 	display:inline-block;
-	border-radius: 2%;
+	border-radius: 1.5vw;
 	float: left;
 	margin-left: -1.5vw;
 	margin-top: -1.4vw;
@@ -29,8 +29,8 @@ html, body {
 .author-search {
 	width: 21vw;
 	margin:0 auto;
-	height: 489px;
-	border-radius: 2%;
+	min-height: 489px;
+	border-radius: 1.5vw;
 	margin-top: 32px;
 	background-color: #D8E0FF;
 	text-align: center;
@@ -63,7 +63,7 @@ h2 {
 	/*display:inline-block;*/
 	float:right;
 	width:67.5vw;
-	height:720px;
+	min-height:720px;
 	margin-top: -1.5vw;
 	margin-right: -2vw;
 	border-radius: 2vw;
@@ -76,8 +76,7 @@ h2 {
 	width: 95%;
 	width: 60.5vw;
 	border-radius: 2%;
-	min-height: 400px;
-	padding-top: 10%;
+	min-height: 489px;
 	margin: 2.7vw auto;
 	background-color: #D8E0FF;
 }
@@ -114,6 +113,7 @@ h2 {
 	font-size: 18px;
 }
 
+
 /*#author-names a {
 	color: #243B00;
 	font-family: nunito;
@@ -139,8 +139,11 @@ h2 {
 
 #genre-list {
 	list-style-type: none;
-	-webkit-padding-start: 0;
-	padding: 0 50px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	overflow: scroll;
+	height: 100px;
 }
 
 #genre-list ul {
@@ -151,9 +154,9 @@ h2 {
 #genre-list li {
 	width: 93px;
 	height: 23px;
-	float: left;
+	float: none;
 	display: inline-block;
-	margin: 5px 22px 11px 5px;
+	margin: 10px;
 	border-radius: 6px;
 	background-color: #728AE1;
 	color: #EBEBEB;
@@ -183,6 +186,13 @@ a {
 /*lightest green: #F6FCED
 */
 
+.get-quote-button {
+	height: 74px;
+	width: 184px;
+	margin-left: 22.8125vw;
+	margin-top: 1.015625vw;
+}
+
 
 #add-quote-block {
 	text-align: center;
@@ -199,11 +209,32 @@ a {
 	width: 165px;
 	height: 36px;
 	margin: 5px 10px 5px;
-	padding: 0;
 	border: none;
 	border-radius: 2%;
 	background-color: #D8E0FF;
 }
+
+.add-input {
+	padding-left: 20px;
+}
+
+
+::-webkit-input-placeholder {
+   color: darkgrey;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: darkgrey;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: darkgrey;  
+}
+
+:-ms-input-placeholder {  
+   color: darkgrey;  
+}
+
 
 #add-quote-form button {
 	display: block;
@@ -218,7 +249,7 @@ a {
 
 
 
-@media all and (max-width: 540px) {
+@media all and (max-width: 720px) {
 
 	#quotes-container {
 		 position: relative;
